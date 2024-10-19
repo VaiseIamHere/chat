@@ -3,8 +3,8 @@ import chat from "../controllers/chats.js"
 import authenticate from "../middlewares/authenticate.js"
 
 const route = express.Router()
-route.use(authenticate)
+// route.use(authenticate)
 
-route.get('/chat', chat)
+route.post('/chat', chat)
 
 export default route

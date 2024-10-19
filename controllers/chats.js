@@ -34,7 +34,7 @@ const reply = async (prompt) => {
 
 const chat = async (req, res) => {
     const response = await reply(req.body.msg)
-    db.createChat(req.user.emailId, response)
+    db.createChat(response)
     return res.status(200).send({
         response
     })
